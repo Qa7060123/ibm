@@ -12,7 +12,7 @@ wget --no-check-certificate -O ibmcloud.sh https://raw.githubusercontent.com/Qa7
 addEventListener(
   "fetch",event => {
      let url=new URL(event.request.url);
-     url.hostname="v2rayy1234.us-south.cf.appdomain.cloud";
+     url.hostname="********.us-south.cf.appdomain.cloud";
      //域名在v2ray配置里
      let request=new Request(url,event.request);
      event. respondWith(
