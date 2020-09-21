@@ -1,0 +1,50 @@
+[{
+    "name": "123ku",
+    "title": "123资源站",
+    "link": "http://www.123ku.com",
+    "description": "123资源站",
+    "localImageResource": "",
+    "presenter": "Text",
+    "openBrowser": "no",
+    "inword":".m3u8,.mp4",
+    "uninword":"51.la,?url=,dplayer/v3",
+    "next":"detail",
+    "thumb":"http://www.123ku.com/template/123_ku/images/logo.png",
+     "category":[{'name': '首页', 'link': 'http://www.123ku.com/?m=vod-index'}, {'name': '电影', 'link': 'http://www.123ku.com/?m=vod-type-id-1'}, {'name': '动作片', 'link': 'http://www.123ku.com/?m=vod-type-id-5'}, {'name': '喜剧片', 'link': 'http://www.123ku.com/?m=vod-type-id-6'}, {'name': '爱情片', 'link': 'http://www.123ku.com/?m=vod-type-id-7'}, {'name': '科幻片', 'link': 'http://www.123ku.com/?m=vod-type-id-8'}, {'name': '恐怖片', 'link': 'http://www.123ku.com/?m=vod-type-id-9'}, {'name': '剧情片', 'link': 'http://www.123ku.com/?m=vod-type-id-10'}, {'name': '战争片', 'link': 'http://www.123ku.com/?m=vod-type-id-11'}, {'name': '论理片', 'link': 'http://www.123ku.com/?m=vod-type-id-16'}, {'name': '连续剧', 'link': 'http://www.123ku.com/?m=vod-type-id-2'}, {'name': '国产剧', 'link': 'http://www.123ku.com/?m=vod-type-id-12'}, {'name': '香港剧', 'link': 'http://www.123ku.com/?m=vod-type-id-13'}, {'name': '韩国剧', 'link': 'http://www.123ku.com/?m=vod-type-id-14'}, {'name': '美国剧', 'link': 'http://www.123ku.com/?m=vod-type-id-15'}, {'name': '海外剧', 'link': 'http://www.123ku.com/?m=vod-type-id-17'}, {'name': '台湾剧', 'link': 'http://www.123ku.com/?m=vod-type-id-18'}, {'name': '日本剧', 'link': 'http://www.123ku.com/?m=vod-type-id-19'}, {'name': '泰国剧', 'link': 'http://www.123ku.com/?m=vod-type-id-21'}, {'name': '综艺', 'link': 'http://www.123ku.com/?m=vod-type-id-3'}, {'name': '动漫', 'link': 'http://www.123ku.com/?m=vod-type-id-4'}],
+    "list": {
+      "pagefilter":"",
+      "pagerule": "-pg-#page.html",
+      "pageone": "-pg-1.html",
+      "fetchtype":"default",
+      "pagesize": 8,
+      "useragent": "default",
+      "videoscontainer":{"selector":"span.xing_vb4 a","attrName":"", "filter": "" },
+      "title":{"selector":"","attrName":"text","filter": "" },
+      "thumb":{"selector":"","attrName":"data-original","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    },
+    "detail": {
+      "useragent": "default",
+      "fetchtype":"default",
+      "videoscontainer":{"selector":"div.vodplayinfo a[target]","attrName":"","filter": "" },
+      "title":{"selector":"","attrName":"text","filter": "(.*)\\$" },
+      "link":{"selector":"","attrName":"text","filter": "\\$(.*)" }
+    },
+    "play": {
+      "useragent": "mobile",
+      "filter": "",
+      "player": "ijk"
+    },
+    "search": {
+      "useragent": "default",
+      "fetchtype":"default",
+      "pagerule": "",
+      "pageone": "",
+      "pagesize": 8,
+      "videoscontainer":{"selector":"h3.title a","attrName":"", "filter": "" },
+      "title":{"selector":"","attrName":"text","filter": "" },
+      "thumb":{"selector":"","attrName":"data-original","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    }
+  }
+  ]
