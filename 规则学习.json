@@ -1,4 +1,54 @@
 [{
+    "name": "66YS",#网站名称，唯一
+    "title": "66影视网",#标题
+     "openBrowser": "yes",#打开浏览器进行人机验证
+    "link": "https://onedrive5.herokuapp.com/%E5%A8%B1%E4%B9%90/",#网站网址，如果爬取链接是相对地址用这个补全，有时需要加/灵活运用
+    "description": "66影视:www.66e.cc",#描述
+    "localImageResource": "",#之前的遗留如果是新网站的话留空
+    "presenter": "Movie",#两种显示方式一种是默认，图片+文字另一种是只有文字Text模式
+    "inword":".mkv,.mp4",#播放地址需要包含的过滤字符串逗号分隔
+    "uninword":"?preview",#播放地址不需要包含的过滤字符串用来排除一些干扰源
+    "next":"detail",#两种模式一种是常见的列表、详情、播放模式用detail，另一种是直接播放页面用Play
+    "thumb":"https://www.6vdy.org/skin/66scc/images/logo.png",#网站缩略图，网站显示页面用
+    "category": [{"name":"mtv","link":"https://onedrive5.herokuapp.com/%E5%A8%B1%E4%B9%90/mtv/"},{"name":"国产电影","link":"https://onedrive5.herokuapp.com/%E5%A8%B1%E4%B9%90/%E7%94%B5%E5%BD%B1/%E5%9B%BD%E4%BA%A7%E7%94%B5%E5%BD%B1/"}],#网站分类不包含分页参数如果分页后面还有参数可用#pagerule替换分页部分即可
+    "list": {
+      "pagerule": "",#分页默认规则会替换#page为页码
+      "pageone": "",#第一页规则直接把第一页的规则写死，用些网站第一页不带页码信息直接写死（必填）
+      "pagesize": 8,#无用
+      "fetchtype":"default",#爬取模式一种是requests类的爬取源码用，第二种：browser有些网站js生成这时可用browser模式访问也就是用浏览器访问，速度会有点慢效果还行
+      "useragent": "default",#爬取的时候浏览器模式默认是chrome 也可用mobile 手机模式
+      "videoscontainer":{"selector":"li.post.box.row.fixed-hight","attrName":"", "filter": "" },#每个项目的选择器，container只需要写selectore即可后面的标题和链接、缩略图才需要用到过滤
+      "title":{"selector":"a.zoom","attrName":"title","filter": "" },#标题的选择器如果为空则调用container的自身如：本例中为空代表用的是container里的li。attrName为需要获取的内容属性如果是text属性写成text即可，filter为java的正则表达式用来对爬取内容进行二次筛选，关于java的正则可用http://www.regexplanet.com/simple/previous.html进行测试。以下相同
+      "thumb":{"selector":"img","attrName":"src","filter": "" },
+      "link":{"selector":"a.zoom","attrName":"href","filter": "" }
+    },
+    "detail": {
+      "useragent": "default",
+      "fetchtype":"default",
+      "videoscontainer":{"selector":"a.lBtn","attrName":"","filter": "" },
+      "title":{"selector":"","attrName":"title","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    },
+    "play": {
+      "useragent": "mobile",
+       "filter": "",#用来对播放地址进行二次过滤
+      "player": "ijk"#播放器三种一种是b站的ijk另一种是系统自带exo2，还有vlc
+    },
+    "search": {
+      "useragent": "default",
+      "fetchtype":"default",
+      "pagerule": "",
+      "pageone": "",
+      "pagesize": 8,
+      "videoscontainer":{"selector":"","attrName":"","filter": "" },
+      "title":{"selector":"","attrName":"title","filter": "" },
+      "thumb":{"selector":"","attrName":"src","filter": "" },
+      "link":{"selector":"","attrName":"href","filter": "" }
+    }
+  }
+	
+	
+	,{
     "name": "123ku",
     "title": "123资源站",
     "link": "http://www.123ku.com",
